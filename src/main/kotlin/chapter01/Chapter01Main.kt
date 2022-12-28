@@ -21,6 +21,12 @@ fun main() {
 
     /**
      * Java Code
+     * String animalName = "cat";
+     */
+    val animalName: String = "dog"
+
+    /**
+     * Java Code
      * Animal animal = new Animal("cat");
      */
     val animal = Animal("cat")
@@ -28,7 +34,8 @@ fun main() {
     println("number1 : $number1")
     println("number2 : $number2")
     println("number3 : $number3")
-    println("animal name : " + animal.name)
+    println("animal name : $animalName")
+    println("animal name : ${animal.name}")
 
 }
 
