@@ -3,6 +3,9 @@ package chapter05
 fun main() {
     val resultAorB = getAorB(1000)
     println(resultAorB)
+
+    val resultGrade = getGrade(30)
+    println(resultGrade)
 }
 
 /**
@@ -22,3 +25,26 @@ fun getAorB(num: Int): String {
         "B"
     }
 }
+
+/**
+ * Java Code
+ * public String getGrade(int num) {
+ *  if (num >= 90) {
+ *      return "A";
+ *  } else if (num >= 50) {
+ *      return "B";
+ *  } else {
+ *      return "C";
+ *  }
+ * }
+ */
+fun getGrade(num: Int): String {
+    return if (num >= 90) {
+        return "A";
+    } else if (num >= 50) {
+        return "B";
+    } else {
+        return "C";
+    }
+}
+
