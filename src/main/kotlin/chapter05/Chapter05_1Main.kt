@@ -6,6 +6,9 @@ fun main() {
 
     val resultGrade = getGrade(30)
     println(resultGrade)
+
+    val resultRanges = getCorD(230)
+    println(resultRanges)
 }
 
 /**
@@ -48,3 +51,20 @@ fun getGrade(num: Int): String {
     }
 }
 
+/**
+ * Java Code
+ * public String getCorD(int num) {
+ *  if (num >= 0 && num <= 30) {
+ *      return "C";
+ *  } else {
+ *      return "D";
+ *  }
+ * }
+ */
+fun getCorD(num: Int): String {
+    return if (num in 0..30) {
+        return "C"
+    } else {
+        return "D"
+    }
+}
