@@ -2,12 +2,13 @@ package chapter05
 
 fun main() {
     println(getGradeWithSwitch(6))
+    println(getGradeRangeWithSwitch(77))
 }
 
 /**
  * Java Code
- * public String getGradeWithSwitch(int score) {
- *  switch (score / 10) {
+ * public String getGradeWithSwitch(int num) {
+ *  switch (num) {
  *      case 9:
  *          return "A";
  *      case 8:
@@ -27,6 +28,16 @@ fun getGradeWithSwitch(num: Int): String {
         8 -> "B"
         7 -> "C"
         6 -> "D"
+        else -> "E"
+    }
+}
+
+fun getGradeRangeWithSwitch(num: Int): String {
+    return when (num) {
+        in 90..99 -> "A"
+        in 80..89 -> "B"
+        in 70..79 -> "C"
+        in 60..69 -> "D"
         else -> "E"
     }
 }
