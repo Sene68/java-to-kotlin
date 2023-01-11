@@ -3,6 +3,9 @@ package chapter05
 fun main() {
     println(getGradeWithSwitch(6))
     println(getGradeRangeWithSwitch(77))
+
+    val resultA: String = "Apple"
+    println(startsWithA(resultA))
 }
 
 /**
@@ -39,5 +42,21 @@ fun getGradeRangeWithSwitch(num: Int): String {
         in 70..79 -> "C"
         in 60..69 -> "D"
         else -> "E"
+    }
+}
+
+/**
+ * Java Code
+ * public Boolean startsWithA(Object obj) {
+ *   if (obj instanceof String)
+ *      return ((String) obj).startsWith("A");
+ *
+ *   return false;
+ * }
+ */
+fun startsWithA(obj: Any): Boolean {
+    return when (obj) {
+        is String -> obj.startsWith("A")
+        else -> false
     }
 }
