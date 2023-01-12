@@ -6,6 +6,7 @@ fun main() {
 
     val resultA: String = "Apple"
     println(startsWithA(resultA))
+    println(getOneToFiveNumber(3))
 }
 
 /**
@@ -58,5 +59,21 @@ fun startsWithA(obj: Any): Boolean {
     return when (obj) {
         is String -> obj.startsWith("A")
         else -> false
+    }
+}
+
+/**
+ * Java Code
+ * public String getOneToFiveNumber(int num) {
+ *  if (num == 1 || num == 2 || num == 3 || num == 4 || num == 5)
+ *      return "A";
+ *
+ *  return "B";
+ * }
+ */
+fun getOneToFiveNumber(num: Int): String {
+    return when (num) {
+        1, 2, 3, 4, 5 -> "A"
+        else -> "B"
     }
 }
