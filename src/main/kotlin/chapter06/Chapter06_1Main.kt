@@ -2,7 +2,8 @@ package chapter06
 
 fun main() {
     getNumberWithForEach()
-    getNumberWithFor()
+    getNumberWithForPlus()
+    getNumberWithForMinus()
 }
 
 /**
@@ -23,14 +24,26 @@ fun getNumberWithForEach() {
 
 /**
  * Java Code
- * public void getNumberWithFor() {
+ * public void getNumberWithForPlus() {
  *  for (int i = 1; i <= 3; i++) {
  *      System.out.println(i);
  *  }
  * }
  */
-fun getNumberWithFor() {
-    for (i in 1..3) {
+fun getNumberWithForPlus() {
+    for (i in 1..3)
         println(i)
-    }
+}
+
+/**
+ * Java Code
+ * public void getNumberWithForMinus() {
+ *  for (int i = 3; i >= 1; i--) {
+ *      System.out.println(i);
+ *  }
+ * }
+ */
+fun getNumberWithForMinus() {
+    for (i in 3 downTo 1)
+        println(i)
 }
