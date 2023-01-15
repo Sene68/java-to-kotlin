@@ -2,6 +2,7 @@ package chapter06
 
 fun main() {
     getNumberWithForEach()
+    getNumberWithFor()
 }
 
 /**
@@ -17,4 +18,19 @@ fun getNumberWithForEach() {
     val numbers = listOf(1, 2, 3)
     for (number in numbers)
         println(number)
+}
+
+
+/**
+ * Java Code
+ * public void getNumberWithFor() {
+ *  for (int i = 1; i <= 3; i++) {
+ *      System.out.println(i);
+ *  }
+ * }
+ */
+fun getNumberWithFor() {
+    for (i in 1..3) {
+        println(i)
+    }
 }
