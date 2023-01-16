@@ -4,6 +4,7 @@ fun main() {
     getNumberWithForEach()
     getNumberWithForPlus()
     getNumberWithForMinus()
+    getNumberWithForStep()
 }
 
 /**
@@ -45,5 +46,18 @@ fun getNumberWithForPlus() {
  */
 fun getNumberWithForMinus() {
     for (i in 3 downTo 1)
+        println(i)
+}
+
+/**
+ * Java Code
+ * public void getNumberWithForStep() {
+ *  for (int i = 1; i <=5; i += 2) {
+ *      System.out.println(i);
+ *  }
+ * }
+ */
+fun getNumberWithForStep() {
+    for (i in 1..5 step 2)
         println(i)
 }
