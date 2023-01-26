@@ -11,6 +11,8 @@ fun main() {
     val animal1 = Animal("Cat", 10)
     println(animal1.name)
 
+    val animal2 = Animal("Dog")
+    println(animal2.name)
 }
 
 /**
@@ -49,4 +51,6 @@ class Animal(val name: String, var age: Int) {
             throw IllegalArgumentException("age must be greater than zero")
         }
     }
+
+    constructor(name: String): this(name, 1)
 }
