@@ -13,6 +13,9 @@ fun main() {
 
     val animal2 = Animal("Dog")
     println(animal2.name)
+    println(animal2.age)
+
+    println(animal2.isAdult)
 }
 
 /**
@@ -41,6 +44,10 @@ class Person(val name: String, var age: Int)
  *          throw new IllegalArgumentException("age must be greater than zero");
  *      }
  *      ...
+ *
+ *      public boolean isAdult() {
+ *          return this.age >= 10;
+ *      }
  *  }
  *
  * }
@@ -53,4 +60,8 @@ class Animal(val name: String, var age: Int) {
     }
 
     constructor(name: String): this(name, 1)
+
+    val isAdult: Boolean
+        get() = this.age >= 10
 }
+
