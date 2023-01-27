@@ -52,7 +52,11 @@ class Person(val name: String, var age: Int)
  *
  * }
  */
-class Animal(val name: String, var age: Int) {
+class Animal(name: String, var age: Int) {
+    // backing field
+    val name: String = name
+        get() = field.uppercase()
+
     init {
         if (age < 1) {
             throw IllegalArgumentException("age must be greater than zero")
