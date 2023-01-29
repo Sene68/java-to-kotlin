@@ -8,6 +8,10 @@ fun main() {
     person1.age = 15
     println(person1.age)
 
+    val person2 = Person("sene", 30)
+    person2.name = "enes"
+    println(person2.name)
+
     val animal1 = Animal("Cat", 10)
     println(animal1.name)
 
@@ -30,7 +34,13 @@ fun main() {
  * }
  *
  */
-class Person(val name: String, var age: Int)
+class Person(name: String, var age: Int) {
+
+    var name = name
+        set(value) {
+            field = value.uppercase()
+        }
+}
 
 
 /**
