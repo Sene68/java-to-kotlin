@@ -4,11 +4,13 @@ fun main() {
     val honeyButterChip = Haitaifactory("HoneyButterChip")
     honeyButterChip.make()
     honeyButterChip.getPrice()
+
+    honeyButterChip.act()
 }
 
 class Haitaifactory(
     name: String
-) : Snack(name, 500) {
+) : Snack(name, 500), Cream, Knead {
 
     private val nitrogenValue: Int = 10
 
@@ -22,4 +24,10 @@ class Haitaifactory(
 
     override val price: Int
         get() = super.price * this.nitrogenValue
+
+    override fun act() {
+        super<Knead>.act()
+        super<Cream>.act()
+    }
+
 }
