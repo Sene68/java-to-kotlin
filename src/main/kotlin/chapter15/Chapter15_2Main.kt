@@ -2,11 +2,16 @@ package chapter15
 
 fun main() {
 
-    val numbers = listOf(100, 200)
+    val numbersList = listOf(100, 200)
 
-    printNumberIndex(numbers, 0)
-    printNumberForEach(numbers)
-    printNumberForLoop(numbers)
+    printNumberIndexOfList(numbersList, 0)
+    printNumberForEachOfList(numbersList)
+    printNumberForLoopOfList(numbersList)
+
+    val numbersSet = setOf(300,400)
+    printNumberIndexOfSet(numbersSet, 1)
+    printNumberForEachOfSet(numbersSet)
+    printNumberForLoopOfSet(numbersSet)
 
 }
 
@@ -16,8 +21,12 @@ fun main() {
  * List<Integer> numbers = Array.asList(100, 200);
  * System.out.println(numbers.get(0));
  */
-private fun printNumberIndex(numbers: List<Int>, idx: Int) {
+private fun printNumberIndexOfList(numbers: List<Int>, idx: Int) {
     println(numbers[idx])
+}
+
+private fun printNumberIndexOfSet(numbers: Set<Int>, idx: Int) {
+    println(numbers.elementAt(idx))
 }
 
 
@@ -28,7 +37,13 @@ private fun printNumberIndex(numbers: List<Int>, idx: Int) {
  *  System.out.println(number);
  * }
  */
-private fun printNumberForEach(numbers: List<Int>) {
+private fun printNumberForEachOfList(numbers: List<Int>) {
+    for (number in numbers) {
+        println(number)
+    }
+}
+
+private fun printNumberForEachOfSet(numbers: Set<Int>) {
     for (number in numbers) {
         println(number)
     }
@@ -41,7 +56,13 @@ private fun printNumberForEach(numbers: List<Int>) {
  *  System.out.printf("%s %s", i, numbers.get(i));
  * }
  */
-private fun printNumberForLoop(numbers: List<Int>) {
+private fun printNumberForLoopOfList(numbers: List<Int>) {
+    for ((idx, value) in numbers.withIndex()) {
+        println("$idx $value")
+    }
+}
+
+private fun printNumberForLoopOfSet(numbers: Set<Int>) {
     for ((idx, value) in numbers.withIndex()) {
         println("$idx $value")
     }
