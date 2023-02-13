@@ -13,6 +13,10 @@ fun main() {
     printNumberForEachOfSet(numbersSet)
     printNumberForLoopOfSet(numbersSet)
 
+    val numbersMap = mutableMapOf<Int, Int>()
+    numbersMap[0] = 500
+    numbersMap[1] = 600
+    printNumberForOfMap(numbersMap)
 }
 
 
@@ -65,5 +69,21 @@ private fun printNumberForLoopOfList(numbers: List<Int>) {
 private fun printNumberForLoopOfSet(numbers: Set<Int>) {
     for ((idx, value) in numbers.withIndex()) {
         println("$idx $value")
+    }
+}
+
+/**
+ * Java Code
+ * Map<Integer, Integer> numbers = new HashMap<>();
+ * numbers.put(0, 500)
+ * numbers.put(1, 600)
+ *
+ * for (int key : numbers.keySet()) {
+ *  System.out.println(numbers.get(key));
+ * }
+ */
+private fun printNumberForOfMap(numbers: Map<Int, Int>) {
+    for (key in numbers.keys) {
+        println(numbers[key])
     }
 }
