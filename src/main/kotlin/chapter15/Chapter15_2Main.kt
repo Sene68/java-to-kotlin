@@ -17,6 +17,9 @@ fun main() {
     numbersMap[0] = 500
     numbersMap[1] = 600
     printNumberForOfMap(numbersMap)
+
+    val numbersMapOf = mapOf(0 to 700, 1 to 800)
+    printNumberForOfMap(numbersMapOf)
 }
 
 
