@@ -15,6 +15,21 @@ fun main() {
     val isAppleWatch = { watch: Watch -> watch.name == "Apple Watch"}
 
     println(isAppleWatch(watches[0]))
+
+    val filterWatches = filterWatches(watches) { it.name == "Apple Watch" }
+    println(filterWatches.size)
+}
+
+private fun filterWatches(
+    watches: List<Watch>, filter: (Watch) -> Boolean
+): List<Watch> {
+    val results = mutableListOf<Watch>()
+    for (watch in watches) {
+        if (filter(watch))
+            results.add(watch)
+    }
+
+    return results
 }
 
 class Watch(
