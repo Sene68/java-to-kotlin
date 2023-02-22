@@ -18,6 +18,12 @@ fun main() {
 
     val filterWatches = filterWatches(watches) { it.name == "Apple Watch" }
     println(filterWatches.size)
+
+    val filterAppleWatches = filterAppleWatch(watches)
+    for (appleWatch in filterAppleWatches) {
+        println(appleWatch.name)
+    }
+
 }
 
 private fun filterWatches(
@@ -30,6 +36,10 @@ private fun filterWatches(
     }
 
     return results
+}
+
+private fun filterAppleWatch(watches: List<Watch>): List<Watch> {
+    return watches.filter { it.name.contains("Apple") }
 }
 
 class Watch(
