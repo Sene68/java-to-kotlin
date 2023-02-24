@@ -10,6 +10,10 @@ fun main() {
         .map { graphicsCard -> graphicsCard.price}
 
     println(radeonPrices)
+
+    val isAllGTX = graphicsCards.all { graphicsCard -> graphicsCard.name.contains("GTX") }
+
+    println(isAllGTX)
 }
 
 data class GraphicsCard (
