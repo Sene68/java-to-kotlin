@@ -21,4 +21,8 @@ fun main() {
     }
 
     println(radeonGraphicsCards)
+
+    val graphicsCardsFlatten = graphicsCards.flatten()
+
+    println(graphicsCardsFlatten)
 }
