@@ -21,4 +21,31 @@ fun main() {
             return@forEach
         println(number)
     }
+
+    //label1
+    label1()
+
+    //label2
+    label2()
+
+}
+
+fun label1() {
+    loop@ for (i in 1..10) {
+        for (j in 1..10) {
+            if (j == 3)
+                break@loop
+            println("$i and $j")
+        }
+    }
+}
+
+fun label2() {
+    loopi@ for (i in 1..10) {
+        loopj@for (j in 1..10) {
+            if (j == 3)
+                break@loopj
+            println("$i and $j")
+        }
+    }
 }
