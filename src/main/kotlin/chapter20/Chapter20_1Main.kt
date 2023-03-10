@@ -14,6 +14,15 @@ fun main() {
 
     animal.apply { this.age = 7 }
     println(animal)
+
+    //with
+    val animal2 = with(animal) {
+        name = "Dog"
+        age = 10
+        age
+    }
+
+    println(animal2)
 }
 
 data class Animal(
